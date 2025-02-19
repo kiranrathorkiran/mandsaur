@@ -135,7 +135,7 @@ function Header({children}){
 }
 function ToastMsg()
 {
-return(<div  className="bg-white m-auto w-2/6 h-auto h-50  mt-10 p-3 text-xl top-10 rounded-md border-black animate-pulse " >
+return(<div  className="bg-purple-500 m-auto w-2/6 h-auto h-50  mt-10 p-3 text-xl top-10 rounded-md border-black animate-pulse " >
 <Link to="/news"> now about latest news in mandsaur</Link>
 
 </div>);
