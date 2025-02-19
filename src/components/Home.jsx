@@ -18,10 +18,10 @@ function Header() {
 
 function Section({ title, imageSrc, altText, description }) {
   return (
-    <div className="bg-slate-900 p-0 m-0 md:flex-row w-screen  flex flex-col items-center text-center gap-6 px-5 py-10">
+    <div className="bg-slate-900  p-0 m-0 w-screen md:flex-row  flex flex-col items-center text-center ">
      
       <img
-        className="w-full max-w-[600px] h-auto object-cover rounded-md"
+        className="w-full  px-5 py-16 max-w-[600px] h-auto object-cover rounded-md"
         src={imageSrc}
         alt={altText}
       />
@@ -36,11 +36,11 @@ function Section({ title, imageSrc, altText, description }) {
 
 function Map() {
   return (
-    <div className="bg-slate-900 p-0 m-0 w-screen h-full flex flex-col items-center text-center gap-6 px-5 py-10">
+    <div className="bg-slate-900 p-0 m-0 w-screen h-full flex flex-col items-center text-center ">
       <h1 className="text-3xl text-[#d7b112]">Map:</h1>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d931454.9621761997!2d75.367938!3d24.224427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39642ea9db15e09f%3A0x89a3e5ea4399695b!2sMandsaur%2C%20Madhya%20Pradesh%2C%20India!5e0!3m2!1sen!2us!4v1708586315798!5m2!1sen!2us"
-        className="w-full h-64 sm:h-80 md:h-96 max-w-[600px] border-none rounded-md"
+        className="w-full h-64 sm:h-80 md:h-96 max-w-[600px] border-none  gap-6 px-5 py-10 rounded-md"
         allowFullScreen
       ></iframe>
     </div>
