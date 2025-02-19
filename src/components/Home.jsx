@@ -6,7 +6,7 @@ import background from "../assets/background2.jpg";
 function Header() {
   return (
     <header
-      className=" p-0 m-0   bg-cover bg-center opacity-90 h-96 Md:w-screen w-screen md:h-screen flex justify-center items-center font-medium text-white text-center  text-xl  brightness-50 sm:text-5xl md:text-6xl"
+      className=" p-0 m-0   bg-cover bg-center  h-96 Md:w-screen w-screen md:h-screen flex justify-center items-center font-medium text-white text-center  text-xl  backdrop-blur sm:text-5xl md:text-6xl"
       style={{ backgroundImage: `url(${background})`, }}
     >
       <h1 className="text-gray-50 brightness-100">
@@ -18,7 +18,7 @@ function Header() {
 
 function Section({ title, imageSrc, altText, description }) {
   return (
-    <div className="bg-slate-900  p-0 m-0 w-screen md:flex-row  flex flex-col items-center text-center ">
+    <div className="bg-slate-900  p-0 m-0 w-full md:flex-row  flex flex-col items-center text-center ">
      
       <img
         className="w-full  px-5 py-16 max-w-[600px] h-auto object-cover rounded-md"
