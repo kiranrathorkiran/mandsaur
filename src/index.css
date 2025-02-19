@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root
+{
+    margin: 0;
+    
+    padding: 0;
+}
+@keyframes pulse {
+    20% {
+        color: rgb(212, 57, 57);
+      }
+      40% {
+        color: rgb(131, 129, 25);
+      }60% {
+        color: rgb(27, 146, 43);
+      }80% {
+        color: rgb(14, 45, 146);
+      }100% {
+        color: rgb(59, 8, 8);
+      }
+}
+.animate-pulse {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
