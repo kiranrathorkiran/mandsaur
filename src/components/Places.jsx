@@ -37,7 +37,7 @@ import { AiOutlineClose } from 'react-icons/ai';
     return(
       <div className={(showModal ? '' : 'hidden ') + "fixed h-screen w-screen flex flex-wrap flex-col justify-start items-center bg-black/[.8] z-50 overflow-auto"}>
         <button
-          className="absolute top-0 right-0 m-2 p-2 bg-red-500 text-black rounded-full hover:bg-red-700 hover:text-white"
+          className="absolute top-0 right-40 m-2 p-2 bg-red-500 text-black rounded-full hover:bg-red-700 hover:text-white"
           onClick={toggleModal}
         >
          <AiOutlineClose size={20} />
