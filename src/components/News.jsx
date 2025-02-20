@@ -2,20 +2,20 @@ import React,{useEffect,useState} from"react";
 
 function News() {
     const [news,setNews]=useState([]);
-    let APIDATA=null;
-    if(APIDATA==null){ 
-     try {
-      APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
+   let APIDATA=null;
+    // if(APIDATA==null){ 
+    //  try {
+    //   APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
     
-     } catch (error) {
-      return<><link to="/">k</link></>
+    //  } catch (error) {
+    //   return<><link to="/">k</link></>
    
       
-     }   }
+    //  }   }
       
       
   
-    // fetch("APIDATA.json")
+ fetch("APIDATA.json")
          
     APIDATA.then((res)=>res.json())
           .then((dataa)=>setNews(dataa.results))
@@ -36,7 +36,7 @@ function News() {
             <p className=" font-serif text-xs border-b-2 "><span className="font-bold font-serif text-base border-b-2 border-black">description:</span>
             {article.description}</p> 
              <p className="font-bold font-serif text-xs ">image :
-             <img src={article.description} alt="image not found"/></p> 
+             <img src={article.image_url} alt="image not found"/></p> 
             
             <p className="text-xs text-end font-bold text-slate-950"><span className="font-bold font-serif text-base border-b-2  border-black"></span>date of publish :{article.pubDate} </p>
              
