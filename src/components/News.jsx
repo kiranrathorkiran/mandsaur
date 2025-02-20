@@ -2,7 +2,20 @@ import React,{useEffect,useState} from"react";
 
 function News() {
     const [news,setNews]=useState([]);
-   const APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur")
+    let APIDATA=null;
+    if(APIDATA==null){ 
+     try {
+      APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
+    
+     } catch (error) {
+    console.error(error)
+      return(<><div className="top-96 text-red-600"> NEWS NOT AVAILABLE</div></>)
+
+      
+     }   }
+      
+      
+  
     // fetch("APIDATA.json")
          
     APIDATA.then((res)=>res.json())
