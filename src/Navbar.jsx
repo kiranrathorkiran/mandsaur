@@ -13,7 +13,7 @@ function Navbar() {
          }
     
     return(
-        <nav className= "bg-slate-800  p-0 m-0 w-screen  fixed backdrop-blur-md backdrop-brightness-50 flex justify-between md:justify-between items-center h-14 max-w-full mx-auto  text-white left-0  top-0 z-10">
+        <nav className= "bg-slate-800  p-0 m-0 w-screen  fixed backdrop-blur-md backdrop-brightness-50 flex justify-between md:justify-between items-center h-14 max-w-full mx-auto px-4 text-white left-0  top-0 z-10">
             <p className= "flex float-start text-green-700 text-xl w-60 p-3">
                 
 
@@ -21,12 +21,12 @@ function Navbar() {
 
 
             </p>
-    <p className="animate-pulse   text-sm font-bold border-b-2 border-white ml-60   center top-96" ><Link to="/news">**Mandsur-News**</Link></p>
+    <p className="animate-pulse   text-sm font-bold border-b-2 border-white    center top-96" ><Link to="/news">**Mandsur-News**</Link></p>
 
            
-             <p className="md:text-2xl text-sm block md:hidden" onClick={handleClick}><AiOutlineMenu/></p>
+             <p className="md:text-2xl text-sm ml-2 block md:hidden" onClick={handleClick}><AiOutlineMenu/></p>
             
-            <ul ref={navref} className= "flex nav flex-col m-0   block  md:border-none md:bg-none  md:mt-0 mt-20  relative md:flex-row justify-end  text-yellow-50 text-sm w-auto p-2 ">
+            <ul ref={navref} className= "flex nav flex-col m-0 ml-2  block  md:border-none md:bg-none  md:mt-0 mt-20  relative md:flex-row justify-end  text-yellow-50 text-sm w-auto p-2 ">
                 <li className= "left-10 w-auto p-2 cursor-pointer  hover:bg-white hover:text-black hover:scale-105  hover:rounded-xl  border-b-2 md:border-none border-white gap-6">  <Link to="/">Home</Link> </li>
                 <li  className= "left-10 w-auto p-2 cursor-pointer hover:bg-white hover:text-black hover:scale-105  hover:rounded-xl gap-6 border-b-2 md:border-none border-white">  <Link to="/places">Places</Link>    </li>
                 <li  className= "left-10 w-auto p-2 cursor-pointer hover:bg-white hover:text-black hover:scale-105 gap-6  hover:rounded-xl border-b-2 md:border-none border-white"> <Link to="/link">Links</Link> </li>
