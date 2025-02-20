@@ -3,19 +3,24 @@ import React,{useEffect,useState} from"react";
 function News() {
     const [news,setNews]=useState([]);
    let APIDATA=null;
-    // if(APIDATA==null){ 
-    //  try {
-    //   APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
+    if(APIDATA==null){ 
+     try {
+      APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
     
-    //  } catch (error) {
-    //   return<><link to="/">k</link></>
+     } catch (error) {
+      return<><link to="/">k</link></>
    
       
-    //  }   }
+     }   }
       
       
-  
- fetch("APIDATA.json")
+  // if(APIDATA==null){ 
+  //    try {
+  //     APIDATA= fetch("APIDATA.json")
+
+  //    } catch (error) {
+      
+  //    }   }
          
     APIDATA.then((res)=>res.json())
           .then((dataa)=>setNews(dataa.results))
