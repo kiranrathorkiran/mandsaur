@@ -61,7 +61,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 
     return(<>
 
-<div
+<div key={title}
       className='  relative after:inline after:text-center after:absolute after:top-0 after:left-0 after:right-0 after:text-xl after:bg-black/[.5] after:text-transparent after:transition-transform-all after:duration-200 after:h-0 hover:after:h-10 hover:after:text-white after:content-[attr(data-image-heading)] cursor-zoom-in'
       data-image-heading={title}
     >

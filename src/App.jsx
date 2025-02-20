@@ -1,6 +1,7 @@
 
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import {Home,Places,Link,Contact,News} from "./components/index"
+import NotFound from "./components/NotFound"
 import Navbar from "./Navbar"
 
 
@@ -22,6 +23,7 @@ function App()
                 <Route path="/link" element={<Link/>}></Route>
                 <Route path="/Contact" element={<Contact/>}></Route>
                 <Route path="/news" element={<News/>}></Route>
+                <Route element={<NotFound/>} ></Route>
             </Routes>
         </Router>
       

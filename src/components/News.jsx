@@ -1,17 +1,42 @@
 import React,{useEffect,useState} from"react";
 
+  
+
+
+
+
 function News() {
+
+
+  async function  fetchData  ()  {
+    try {
+      const response = await fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
+      if (!response.ok) {
+        if (response.status === 404) {
+          console.log('Resource not found!');
+          // Optionally, display an error message or redirect
+        } else {
+          throw new Error('Something went wrong!');
+        }
+      }
+      const data = await response.json();
+       const newsdata = await data.results;
+      setNews(newsdata)
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
     const [news,setNews]=useState([]);
-   let APIDATA=null;
-    if(APIDATA==null){ 
-     try {
-      APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
+    // setNews(data.results)=fetchData();
+  //   if(APIDATA==null){ 
+  //    try {
+  //     APIDATA =fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
     
-     } catch (error) {
-      return<><link to="/">k</link></>
+  //    } catch (error) {
+  //     return<><link to="/">k</link></>
    
       
-     }   }
+  //    }   }
       
       
   // if(APIDATA==null){ 
@@ -22,9 +47,9 @@ function News() {
       
   //    }   }
          
-    APIDATA.then((res)=>res.json())
-          .then((dataa)=>setNews(dataa.results))
-          .catch((error)=>console.error("error Feacching News",error));   
+    // APIDATA.then((res)=>res.json())
+    //       .then((dataa)=>setNews(dataa.results))
+    //       .catch((error)=>console.error("error Feacching News",error));   
        
     return(<>
     <div>
