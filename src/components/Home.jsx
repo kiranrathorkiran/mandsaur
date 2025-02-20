@@ -2,23 +2,27 @@
 import img from "../assets/background.jpg";
 import mdsInMP from "../assets/mandsaur_in_mp.png";
 import background from "../assets/background2.jpg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header
       className=" p-0 m-0   bg-cover bg-center  h-96 Md:w-screen w-screen md:h-screen flex justify-center items-center font-medium text-white text-center  text-xl  backdrop-blur sm:text-5xl md:text-6xl"
       style={{ backgroundImage: `url(${background})`, }}
-    >
-      <h1 className="text-gray-50 brightness-100">
+    >  
+   
+        <h1 className="text-gray-50 brightness-100">
         Welcome <em>to</em> <span className="text-red-500">Mandsaur!</span>
       </h1>
+      
+      
     </header>
   );
 }
 
 function Section({ title, imageSrc, altText, description }) {
   return (
-    <div className="bg-slate-900  p-0 m-0 w-full md:flex-row  flex flex-col items-center text-center ">
+    <div className=" bg-slate-900 p-0 m-0 w-screen h-full   md:flex-row  flex flex-col items-center text-center ">
      
       <img
         className="w-full  px-5 py-16 max-w-[600px] h-auto object-cover rounded-md"

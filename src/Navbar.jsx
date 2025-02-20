@@ -21,8 +21,10 @@ function Navbar() {
 
 
             </p>
+    <p className="animate-pulse text-right right-8 text-2xl font-bold border-b-2 border-black   right-5 top-96" ><Link to="/news">**Mandsur-News**</Link></p>
+
            
-             <p className="text-5xl block md:hidden" onClick={handleClick}><AiOutlineMenu/></p>
+             <p className="md:text-2xl text-sm block md:hidden" onClick={handleClick}><AiOutlineMenu/></p>
             
             <ul ref={navref} className= "flex nav flex-col m-0   block  md:border-none md:bg-none  md:mt-0 mt-20  relative md:flex-row justify-end  text-yellow-50 text-sm w-auto p-2 ">
                 <li className= "left-10 w-auto p-2 cursor-pointer  hover:bg-white hover:text-black hover:scale-105  hover:rounded-xl  border-b-2 md:border-none border-white gap-6">  <Link to="/">Home</Link> </li>
