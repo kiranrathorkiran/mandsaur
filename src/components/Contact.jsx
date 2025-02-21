@@ -4,7 +4,7 @@ import '../App.css';
 
 export default function Contact() {
   return (
-    <div className="w-screen h-screen fixed  flex flex-col items-center mt-10  text-xl md:text-2xl text-center bg-black text-slate-50">
+    <div className="w-screen h-screen fixed  flex flex-col items-center   text-xl md:text-2xl text-center bg-black text-slate-50">
       <br/>
       <p>If you want to contact me, please write to:</p>
       <a

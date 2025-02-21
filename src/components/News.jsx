@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from"react";
+import { Link } from "react-bootstrap-icons";
 
   
 
@@ -13,7 +14,8 @@ function News() {
       const response = await fetch("https://newsdata.io/api/1/news?apikey=pub_707160e9e96ffb3e0f706f2a61e424df7754c&q=Mandsaur");
       if (!response.ok) {
         if (response.status === 404) {
-          console.log('Resource not found!');
+          console.log('Resource not found!')
+          ;return(<>not found</>)
           // Optionally, display an error message or redirect
         } else {
           throw new Error('Something went wrong!');
